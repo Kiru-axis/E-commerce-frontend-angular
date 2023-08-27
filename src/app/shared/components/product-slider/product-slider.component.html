@@ -1,0 +1,71 @@
+<swiper-container init="false" appSwiper [config]="config">
+  <swiper-slide
+    *ngFor="let prod of products"
+    class="shadow border-0 product card"
+  >
+    <div class="">
+      <div class="product__img">
+        <img
+          [src]="prod.img"
+          class="card-img-top card-img rounded-0 main-img"
+          [alt]="prod.img"
+        />
+        <img
+          src="assets/images/blog-5.jpg"
+          class="img-fluid sub-img"
+          [alt]="prod.img"
+        />
+      </div>
+
+      <div class="card-body product__details">
+        <h5 class="product__subtitle">{{ prod.brand }}</h5>
+        <h4 class="product__title">
+          {{ prod.title | slice : 0 : 50 }}
+        </h4>
+
+        <span class="product__ratings">
+          <i><fa-icon [icon]="icons.star"></fa-icon></i>
+          <i><fa-icon [icon]="icons.star"></fa-icon></i>
+          <i><fa-icon [icon]="icons.star"></fa-icon></i>
+          <i><fa-icon [icon]="icons.star"></fa-icon></i>
+          <i><fa-icon [icon]="icons.star"></fa-icon></i>
+        </span>
+
+        <div class="product__prices">
+          <h4>
+            <span class="current-price text-orange fw-500">
+              {{ "399" | currency }}</span
+            >
+            &nbsp;
+            <span class="previous-price">{{ "499" | currency }}</span>
+          </h4>
+        </div>
+      </div>
+
+      <!-- overlays -->
+      <div class="product__towishlist">
+        <img src="assets/images/wish.svg" alt="wishlist" class="icon-img" />
+      </div>
+
+      <div class="product__action-icons">
+        <a routerLink="/store/product/1" class="d-block">
+          <img src="assets/images/view.svg" alt="wishlist" class="icon-img" />
+        </a>
+        <a routerLink="/customer/compare" class="d-block">
+          <img
+            src="assets/images/prodcompare.svg"
+            alt="wishlist"
+            class="icon-img"
+          />
+        </a>
+        <a routerLink="/customer/wishlist" class="d-block">
+          <img
+            src="assets/images/add-cart.svg"
+            alt="wishlist"
+            class="icon-img"
+          />
+        </a>
+      </div>
+    </div>
+  </swiper-slide>
+</swiper-container>

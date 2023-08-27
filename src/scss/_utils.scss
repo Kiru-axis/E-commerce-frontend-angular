@@ -1,0 +1,107 @@
+@import "mixins";
+
+.text-gloom {
+  color: #888da8;
+}
+.img-circle {
+  border-radius: 50% !important;
+}
+.icon-img {
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  cursor: pointer;
+}
+
+.text-orange {
+  color: var(--orange);
+}
+
+.section-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.divider {
+  border: 0.5px solid #888da8;
+  margin: 1rem 0;
+}
+fa-icon {
+  color: #ffc108;
+  cursor: pointer;
+}
+
+.card {
+  // background-color: #fff;
+  // border: 0;
+  // border-radius: 0.2rem;
+  // box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.7rem;
+  padding: 0;
+  letter-spacing: 0.5px;
+  color: var(--primary);
+  text-transform: capitalize;
+  // @include mobile {
+  //   font-size: 1rem !important;
+  // }
+}
+.subtitle {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.3rem;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+  // @include mobile {
+  //   font-size: 0.8rem !important;
+  // }
+}
+.desc {
+  font-size: 0.89rem;
+  line-height: 1.09rem;
+  letter-spacing: 0.4px;
+  margin: 0 0 2rem;
+  font-weight: 500;
+  color: var(--primary);
+  // @include mobile {
+  //   font-size: 0.7rem !important;
+  // }
+}
+.link-btn {
+  display: inline-block;
+  text-align: center;
+  background-color: var(--tertiary);
+  color: var(--white);
+  padding: remmed(13) remmed(33);
+  font-size: remmed(16);
+  border-radius: remmed(16);
+  transition: var(--transition);
+  font-weight: 500;
+  &:hover {
+    // background-color: #febd69;
+    background-color: var(--warning);
+    color: var(--primary);
+  }
+}
+
+@for $weight from 100 through 900 {
+  .fw-#{$weight} {
+    font-weight: $weight;
+  }
+}
+
+@for $pxSize from 0 through 40 {
+  $toRem: calc($pxSize / 16) + rem;
+  .f-size-#{$pxSize} {
+    font-size: $toRem;
+  }
+  .gap-#{$pxSize} {
+    gap: $toRem;
+  }
+}

@@ -1,0 +1,44 @@
+@import "src/scss/mixins";
+
+.cat {
+  background-color: var(--white);
+  border-radius: remmed(10);
+  padding: remmed(14);
+}
+
+.cat__header {
+  font-weight: 700;
+  font-size: remmed(25);
+  line-height: remmed(32);
+  color: var(--primary);
+  text-transform: capitalize;
+  margin-bottom: 1.3rem;
+  letter-spacing: 0.4px;
+}
+.cat__subheader {
+  font-weight: 600;
+  font-size: remmed(20);
+  line-height: remmed(27);
+  color: var(--primary);
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+.cat__link {
+  display: block;
+  padding: 1rem 0;
+  margin: 0.8rem 0;
+  color: var(--gray);
+  font-size: remmed(17);
+  font-weight: 600;
+  transition: var(--transition);
+  &:hover {
+    color: var(--orange);
+  }
+}
+
+.form-check-input {
+  height: remmed(18);
+  width: remmed(18);
+  box-shadow: none;
+}

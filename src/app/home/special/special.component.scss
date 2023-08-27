@@ -1,0 +1,15 @@
+.main-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    // height: 100%;
+    // width: 100%;
+    // object-fit: cover;
+  }
+}
+
+button {
+  background-color: var(--tertiary);
+  color: white;
+}

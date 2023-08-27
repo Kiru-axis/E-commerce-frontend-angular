@@ -1,0 +1,13 @@
+<section class="category py-4">
+  <div
+    class="category__item d-flex align-items-center gap-25 bg-white p-4 overflow-hidden"
+    *ngFor="let cat of categories; let i = index"
+    [ngClass]="{ 'border-end': i < 9, 'border-top': i >= 5 }"
+  >
+    <div class="category__details">
+      <p class="f-size-16 text-dark fw-700">{{ cat.title }}</p>
+      <p class="f-size-14">{{ cat.count }} items</p>
+    </div>
+    <img [src]="cat.img" class="img-fluid" [alt]="cat.img" />
+  </div>
+</section>

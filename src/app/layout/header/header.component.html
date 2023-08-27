@@ -1,0 +1,171 @@
+<header class="header">
+  <nav class="topnav py-3">
+    <div
+      class="container-xxl d-flex align-items-center justify-content-between"
+    >
+      <p class="text-capitalize fw-600 text-white f-size-14">
+        Free Shipping over $1000 and free returns
+      </p>
+      <div class="d-flex align-items-center">
+        <a
+          class="pe-5 border-end fw-600 text-white f-size-14"
+          href="tel:123456789"
+          >Hotline: 123456789</a
+        >
+        <div class="d-flex">
+          <div class="dropdown px-3">
+            <a
+              class="dropdown-toggle fw-500 text-white f-size-14"
+              type="button"
+              id="language"
+              data-bs-toggle="dropdown"
+            >
+              EN
+            </a>
+            <div class="dropdown-menu" aria-labelledby="language">
+              <span class="dropdown-item d-block">ESP</span>
+              <span class="dropdown-item d-block">GER</span>
+              <span class="dropdown-item d-block">KIS</span>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a
+              class="dropdown-toggle fw-500 text-white f-size-14"
+              type="button"
+              id="currency"
+              data-bs-toggle="dropdown"
+            >
+              USD$
+            </a>
+            <div class="dropdown-menu" aria-labelledby="currency">
+              <span class="dropdown-item d-block">ASD$</span>
+              <span class="dropdown-item d-block">KES</span>
+              <span class="dropdown-item d-block">uro</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="mainnav py-3">
+    <div class="container-xxl">
+      <div class="row">
+        <div class="col-2">
+          <a routerLink="/"><h1 class="fw-700 text-white">Shopify</h1></a>
+        </div>
+
+        <div class="col-5">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search...."
+              aria-label="Button"
+            />
+            <button
+              class="btn btn-outline-secondary fw-400"
+              type="button"
+              id=""
+            >
+              <fa-icon [icon]="icons.search"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="col-5">
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="header__links d-flex gap-10" *ngFor="let link of links">
+              <img [src]="link.icon" class="" [alt]="link.icon" />
+              <div class="">
+                <a class="text-white" [routerLink]="[link.routerLink1]">{{
+                  link.label1
+                }}</a>
+                <br />
+                <a class="text-white" [routerLink]="[link.routerLink2]">{{
+                  link.label2
+                }}</a>
+              </div>
+            </div>
+            <div class="header__cart d-flex gap-10">
+              <img src="assets/images/cart.svg" alt="cart" />
+              <div class="d-flex flex-column">
+                <span class="badge bg-white text-dark">10</span>
+                <span class="d-block mt-1"> {{ "500" | currency }} </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="bottomnav py-3">
+    <div class="container-xxl d-flex align-items-center gap-27">
+      <div class="sub-logo d-flex gap-15">
+        <img
+          src="assets/images/menu.svg"
+          alt="sub-logo"
+          class="sub-logo-img img-fluid"
+        />
+        <div class="dropdown">
+          <button
+            class="dropdown-toggle text-uppercase text-white bg-transparent pe-2 border-end rounded-0 fw-500"
+            type="button"
+            id="categoriesShop"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <span class="">Shop Categories</span>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="categoriesShop">
+            <a
+              class="dropdown-item py-3 border-bottom text-white text-capitalize f-size-14"
+              routerLink="/"
+              >Home</a
+            >
+            <a
+              class="dropdown-item py-3 border-bottom text-white text-capitalize f-size-14"
+              routerLink="/store"
+              >Store</a
+            >
+            <a
+              class="dropdown-item py-3 border-bottom text-white text-capitalize f-size-14"
+              routerLink="/blogs"
+              >Blogs</a
+            >
+            <a
+              class="dropdown-item py-3 border-bottom text-white text-capitalize f-size-14"
+              routerLink="/auth/contact"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-menu-links d-flex align-items-center gap-15">
+        <a
+          class="text-white text-uppercase f-size-14 fw-600 sub-link"
+          routerLink="/"
+          >Home</a
+        >
+        <a
+          class="text-white text-uppercase f-size-14 fw-600 sub-link"
+          routerLink="/store"
+          >Store</a
+        >
+        <a
+          class="text-white text-uppercase f-size-14 fw-600 sub-link"
+          routerLink="/blogs"
+          >Blogs</a
+        >
+        <a
+          class="text-white text-uppercase f-size-14 fw-600 sub-link"
+          routerLink="/auth/contact"
+          >Contact</a
+        >
+      </div>
+    </div>
+  </nav>
+</header>

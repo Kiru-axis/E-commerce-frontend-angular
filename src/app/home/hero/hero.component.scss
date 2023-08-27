@@ -1,0 +1,70 @@
+@import "src/scss/mixins";
+
+.hero {
+  @include tablet {
+    .hero__left {
+      display: none;
+    }
+    .hero__right {
+      overflow: hidden;
+      width: 100%;
+      margin: 1rem;
+    }
+    .hero__right-item {
+      height: 15rem;
+      // margin: 0.8rem 0;
+      img {
+        height: 100%;
+        width: 100%;
+        display: block;
+        // aspect-ratio: 1/1;
+      }
+    }
+  }
+}
+
+.banner {
+  position: relative;
+}
+
+.main-banner-content {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+
+  .title {
+    font-size: remmed(52);
+    line-height: remmed(64);
+    letter-spacing: -3px;
+  }
+  .subtitle {
+    color: var(--orange);
+    text-transform: uppercase;
+  }
+  .desc {
+    margin: 1rem 0;
+  }
+  .link-btn {
+  }
+}
+
+.sub-banner-content {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+
+  .title {
+    font-size: remmed(18);
+    line-height: remmed(24);
+  }
+  .subtitle {
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: normal;
+    font-size: remmed(14);
+  }
+  .desc {
+    margin: 0.7rem 0;
+    font-size: remmed(14);
+  }
+}

@@ -1,0 +1,12 @@
+<section class="py-5">
+  <swiper-container
+    init="false"
+    appSwiper
+    [config]="config"
+    class="bg-white rounded"
+  >
+    <swiper-slide *ngFor="let img of brands" class="p-2">
+      <img [src]="img" [alt]="img" class="img-fluid" loading="lazy" />
+    </swiper-slide>
+  </swiper-container>
+</section>

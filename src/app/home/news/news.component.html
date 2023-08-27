@@ -1,0 +1,26 @@
+<section class="py-4">
+  <h2 class="section-header mb-4">Latest News</h2>
+  <div class="row g-2">
+    <div class="col-12 col-sm-6 col-md-3" *ngFor="let d of dataset">
+      <div class="card h-100">
+        <img class="card-img-top img-fluid" [src]="d" [alt]="d" />
+        <div class="card-body">
+          <p class="card-text fw-500">11 june 2018</p>
+          <h4 class="card-title fw-700 fs-21">
+            {{
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, incidunt assumenda ex mollitia, sit quam nihil totam et saepe tenetur esse molestias commodi."
+                | slice : 0 : 34
+            }}
+            <p class="card-text text-gloom fs-14 fw-400">
+              {{
+                "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus quod placeat in maxime totam reiciendis sint at itaque libero molestiae aperiam dolorum ipsum ducimus repellat deserunt facilis, facere nulla!"
+                  | slice : 0 : 77
+              }}
+            </p>
+            <a routerLink="/blogs/1" class="link-btn fs-14 mt-2">Read More</a>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

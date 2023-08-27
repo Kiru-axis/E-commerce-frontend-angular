@@ -1,0 +1,173 @@
+<section class="py-4">
+  <h2 class="section-header mb-4">Special Products</h2>
+  <div class="row g-2">
+    <div class="col-12 col-sm-6 col-md-4" *ngFor="let d of dataset">
+      <div class="card shadow h-100 overflow-hidden p-2">
+        <div class="row g-0 h-100">
+          <div class="col-5 flex-column special__images position-relative">
+            <div class="main-img h-75">
+              <img
+                src="assets/images/tab1.jpg"
+                alt=""
+                class="card-img rounded-0 d-block"
+              />
+            </div>
+            <swiper-container
+              init="false"
+              appSwiper
+              [config]="config"
+              class="h-25"
+            >
+              <swiper-slide *ngFor="let d of dataset" class="product">
+                <div class="m-1">
+                  <img [src]="d" alt="" class="img-fluid" />
+                </div>
+              </swiper-slide>
+            </swiper-container>
+            <div class="wishlist-icon position-absolute top-0 end-0 m-2">
+              <img
+                src="assets/images/wish.svg"
+                class="icon-img"
+                alt="wishlist-icon"
+              />
+            </div>
+          </div>
+          <div class="col-7 h-100">
+            <div class="card-body d-flex flex-column gap-15">
+              <h5 class="text-orange fw-500">Uzamio</h5>
+              <h4 class="text-dark fw-600 f-size-18">
+                Lorem ipsum dolor sit amet, consectetur.
+              </h4>
+              <span class="product__ratings d-flex">
+                <i><fa-icon [icon]="icons.star"></fa-icon></i>
+                <i><fa-icon [icon]="icons.star"></fa-icon></i>
+                <i><fa-icon [icon]="icons.star"></fa-icon></i>
+                <i><fa-icon [icon]="icons.star"></fa-icon></i>
+                <i><fa-icon [icon]="icons.star"></fa-icon></i>
+              </span>
+              <div class="product__prices">
+                <h4>
+                  <span class="text-danger fw-500">
+                    {{ "399" | currency }}</span
+                  >
+                  &nbsp;
+                  <span class="text-gloom text-decoration-line-through">{{
+                    "499" | currency
+                  }}</span>
+                </h4>
+              </div>
+              <div
+                class="product__discount-info d-flex align-items-center gap-10"
+              >
+                <span class="d-block text-gloom"><b>145</b> days</span>
+                <span class="d-block">
+                  <span class="badge bg-danger rounded-circle p-2">05 </span> :
+                  <span class="badge bg-danger rounded-circle p-2">10 </span> :
+                  <span class="badge bg-danger rounded-circle p-2">19</span>
+                </span>
+              </div>
+              <div class="products__available">
+                <span class="text-gloom">Products 15</span>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 15%"
+                    aria-valuenow="25"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <button class="w-50 f-size-14 rounded p-2">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="special py-4">
+  <h2 class="section-header">Special Products</h2>
+  <div class="row g-2">
+    <div class="col-4" *ngFor="let test of dataset">
+      <div class="card shadow overflow-hidden">
+        <div class="row">
+          <div class="col-6 images">
+            <div class="row g-0">
+              <div class="col-12">
+                <img
+                  src="assets/images/blog-3.jpg"
+                  class="img-fluid main"
+                  alt="test"
+                />
+              </div>
+            </div>
+            <div class="row g-0 my-1">
+              <div class="col-6">
+                <img
+                  src="assets/images/blog-1.jpg"
+                  class="img-fluid"
+                  alt="test"
+                />
+              </div>
+              <div class="col-6">
+                <img
+                  src="assets/images/blog-1.jpg"
+                  class="img-fluid"
+                  alt="test"
+                />
+              </div>
+            </div>
+            <div class="wishlist-icon">
+              <img src="assets/images/wish.svg" class="icon-img" alt="" />
+            </div>
+          </div>
+          <div class="col-6">
+            <h5 class="">Uzamio</h5>
+            <h4 class="">Lorem ipsum dolor sit amet, consectetur.</h4>
+            <span class="product__ratings">
+              <i><fa-icon [icon]="icons.star"></fa-icon></i>
+              <i><fa-icon [icon]="icons.star"></fa-icon></i>
+              <i><fa-icon [icon]="icons.star"></fa-icon></i>
+              <i><fa-icon [icon]="icons.star"></fa-icon></i>
+              <i><fa-icon [icon]="icons.star"></fa-icon></i>
+            </span>
+            <div class="product__prices my-2">
+              <h4 class="product__desc">
+                {{ "399" | currency }}
+                &nbsp;
+                {{ "499" | currency }}
+              </h4>
+            </div>
+            <div
+              class="product__discount-info d-flex align-items-center gap-10 my-2"
+            >
+              <span class="d-block text-gloom"><b>145</b> days</span>
+              <span class="d-block">
+                <span class="badge bg-danger rounded-circle p-2">05 </span> :
+                <span class="badge bg-danger rounded-circle p-2">10 </span> :
+                <span class="badge bg-danger rounded-circle p-2">19</span>
+              </span>
+            </div>
+            <div class="products__available my-3">
+              <span class="text-gloom">Products 15</span>
+              <div class="progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  style="width: 15%"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->

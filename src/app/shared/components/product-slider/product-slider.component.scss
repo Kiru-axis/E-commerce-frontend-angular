@@ -1,0 +1,88 @@
+@import "src/scss/mixins";
+
+.product {
+  overflow: hidden;
+  transition: var(--transition);
+  &:hover {
+    .product__action-icons {
+      right: 0.5rem;
+    }
+  }
+}
+
+.product__img {
+  height: remmed(270);
+  transition: var(--transition);
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .main-img {
+    display: block;
+  }
+  .sub-img {
+    display: none;
+  }
+  &:hover {
+    .main-img {
+      display: none;
+    }
+    .sub-img {
+      display: block;
+    }
+  }
+}
+
+.product__title {
+  font-size: remmed(19);
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: normal;
+}
+.product__subtitle {
+  color: var(--orange);
+  font-size: 1rem;
+  font-weight: 500;
+}
+.product__desc {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  color: var(--primary);
+}
+.product__prices {
+  margin: 0.6rem 0;
+  .previous-price {
+    text-decoration: line-through;
+    color: var(--gray);
+    font-weight: 500;
+  }
+  .current-price {
+    font-weight: 500;
+    color: var(--orange);
+  }
+}
+.product__ratings {
+  display: flex;
+}
+
+.product__towishlist {
+  position: absolute;
+  top: 4%;
+  right: 0.5rem;
+}
+
+.product__action-icons {
+  position: absolute;
+  top: 12%;
+  right: -2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.icon-img {
+  height: 1.12rem;
+  width: 1.12rem;
+}

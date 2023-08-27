@@ -1,0 +1,73 @@
+<section class="filters">
+  <div class="cat cat-1">
+    <h2 class="cat__header">Shop By Categories</h2>
+    <div class="cat__links">
+      <a routerLink="/" class="cat__link">Home</a>
+      <a routerLink="/store" class="cat__link">Store</a>
+      <a routerLink="/blogs" class="cat__link">Blogs</a>
+      <a routerLink="/auth/contact" class="cat__link">Contact</a>
+    </div>
+  </div>
+  <div class="cat cat-1 my-2">
+    <h2 class="cat__header">Filter By</h2>
+    <div class="filt-1">
+      <h4 class="cat__subheader">Availability</h4>
+      <div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value="inStock"
+            id="inStock"
+          />
+          <label
+            class="form-check-label text-gloom f-size-16 fw-500 ms-2"
+            for="inStock"
+          >
+            In Stock(45)
+          </label>
+        </div>
+        <div class="form-check my-3">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value="outOfStock"
+            id="outOfStock"
+          />
+          <label
+            class="form-check-label text-gloom f-size-16 fw-500 ms-2"
+            for="outOfStock"
+          >
+            In Of Stock(5)
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="filt-2 my-5">
+      <h2 class="cat__subheader">Price</h2>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            name="minPrice"
+            id="minPrice"
+            placeholder=""
+          />
+          <label for="minPrice">Min</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            name="maxPrice"
+            id="maxPrice"
+            placeholder=""
+          />
+          <label for="maxPrice">Max</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
